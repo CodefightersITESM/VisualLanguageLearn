@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <AFNetworking.h>
 @import Firebase;
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -18,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    //[self takePicture];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -47,14 +47,31 @@
             if(labels.count == 0){
                 NSLog(@"No labels detected");
             } else {
-                for(FIRVisionLabel *label in labels){
-                    NSString *labelText = label.label;
-                    NSLog(@"Label Text: %@", labelText);
-                }
+                [self testTranslation:labels.firstObject.label];
+//                for(FIRVisionLabel *label in labels){
+//                    NSString *labelText = label.label;
+//                    [self testTranslation:labelText];
+//                    NSLog(@"Label Text: %@", labelText);
+//                }
             }
         }
     }];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)testTranslation:(NSString*)text {
+    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+    NSDictionary* params = @{@"q":text,
+                             @"target":@"es",
+                             @"format":@"text",
+                             @"source":@"en",
+                             @"key":@"AIzaSyCzwSy87KZ0AQJO6460slzTVLmt-5QLv8A"};
+    NSString* baseURL = @"https://translation.googleapis.com/language/translate/v2";
+    [manager POST:baseURL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
