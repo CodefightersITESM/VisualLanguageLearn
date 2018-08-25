@@ -15,6 +15,7 @@
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
 
+
 @end
 
 @implementation ViewController

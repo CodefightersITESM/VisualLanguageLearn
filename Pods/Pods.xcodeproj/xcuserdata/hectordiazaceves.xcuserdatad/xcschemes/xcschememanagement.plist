@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FirebaseAuth.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FirebaseCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FirebaseDatabase.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -59,6 +69,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>leveldb-library.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,17 +87,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2AE5F8A60E5787A546DCED382B85CD5E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>315457A382686FA2B9FA234601EB935C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34C88EA3E02ED5CD3F021AF35AF96117</key>
+		<key>4A4EF0F30310928C16A5314CCAB61E2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5072AF0A8E1D0408870D125FC5D963A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5F00538392EBF4B6962E432C465DEDD2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6378F826A8AA75CFCE88104586463B03</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,6 +122,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>96A30369F0D65776929C8CA83C36FA0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>976AAC7FF653B9BE80CA53516F64E0DA</key>
 		<dict>
 			<key>primary</key>
@@ -107,22 +137,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBFBECAFEDE7DECB2CB06ED19ED8312B</key>
+		<key>A2258E7F6334684C478FB74902CDA265</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC72722F39581FB2BA1EB263E125AEA0</key>
+		<key>D1AF8F2CC64B7ED0A3625CB4707D8E14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA24E7B8CF063F04EB66036F7C04F042</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>EE8404B208ADF08E7DFB36AF48FB3CC8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F1438AEC53CA54109733DA535FB683BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
