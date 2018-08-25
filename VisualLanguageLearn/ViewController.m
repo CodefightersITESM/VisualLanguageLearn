@@ -14,8 +14,8 @@
 @import Firebase;
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
-
-
+@property (strong, nonatomic) CLLocationManager* locationManager;
+@property (strong, nonatomic) CLLocation* currentLocation;
 @end
 
 @implementation ViewController
@@ -23,9 +23,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    [self initLocation];
     UIImage *image = [UIImage imageNamed:@"Tree"];
     [self uploadImageToFirebase:image];
+}
+
+- (void)initLocation {
+    self.locationManager = [CLLocationManager new];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager requestAlwaysAuthorization];
+    self.locationManager.distanceFilter = 50;
+    [self.locationManager startUpdatingLocation];
+    self.locationManager.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -103,8 +112,29 @@
     
 }
 
-
-
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    if(self.currentLocation == nil)
+    {
+        CLLocation* location = [locations lastObject];
+        self.currentLocation = location;
+        [self.locationManager stopUpdatingLocation];
+        
+        // get country
+        CLGeocoder* geocoder = [[CLGeocoder alloc] init];
+        [geocoder reverseGeocodeLocation:self.currentLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+            if(error == nil)
+            {
+                CLPlacemark* placemark = [placemarks firstObject];
+                NSString* country = placemark.country;
+                NSLog(@"%@", country);
+            }
+            else
+            {
+                NSLog(@"%@", error.localizedDescription);
+            }
+        }];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
