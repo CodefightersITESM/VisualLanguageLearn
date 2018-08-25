@@ -19,6 +19,7 @@
 		9D4747B42131C59D00886EED /* VisualLanguageLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4747B32131C59D00886EED /* VisualLanguageLearnTests.m */; };
 		9D4747BF2131C59D00886EED /* VisualLanguageLearnUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4747BE2131C59D00886EED /* VisualLanguageLearnUITests.m */; };
 		9D4747CD2131C94000886EED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D4747CC2131C94000886EED /* GoogleService-Info.plist */; };
+		9D4747CF2131F55C00886EED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4747CE2131F55C00886EED /* CoreLocation.framework */; };
 		DF258812C164B10D38EB5736 /* libPods-VisualLanguageLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9C7568A04417E33F7B4587 /* libPods-VisualLanguageLearn.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9D4747BE2131C59D00886EED /* VisualLanguageLearnUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualLanguageLearnUITests.m; sourceTree = "<group>"; };
 		9D4747C02131C59D00886EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4747CC2131C94000886EED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D4747CE2131F55C00886EED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BB3ADFB31E81942E243777C3 /* Pods-VisualLanguageLearnUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnUITests/Pods-VisualLanguageLearnUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D55A6218628C104329F685F6 /* libPods-VisualLanguageLearnUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisualLanguageLearnUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF253EB25F10679DF9AD965E /* libPods-VisualLanguageLearnTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisualLanguageLearnTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4747CF2131F55C00886EED /* CoreLocation.framework in Frameworks */,
 				DF258812C164B10D38EB5736 /* libPods-VisualLanguageLearn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +182,7 @@
 		F03E61E15EAC65C047E6D05D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D4747CE2131F55C00886EED /* CoreLocation.framework */,
 				7F9C7568A04417E33F7B4587 /* libPods-VisualLanguageLearn.a */,
 				DF253EB25F10679DF9AD965E /* libPods-VisualLanguageLearnTests.a */,
 				D55A6218628C104329F685F6 /* libPods-VisualLanguageLearnUITests.a */,
@@ -256,7 +260,7 @@
 				TargetAttributes = {
 					9D4747922131C59D00886EED = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4H789JND9X;
+						DevelopmentTeam = ZN4X58VYZ4;
 						ProvisioningStyle = Automatic;
 					};
 					9D4747AE2131C59D00886EED = {
@@ -538,7 +542,7 @@
 			baseConfigurationReference = 9B6EBA6E38A7013E240432FF /* Pods-VisualLanguageLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4H789JND9X;
+				DEVELOPMENT_TEAM = ZN4X58VYZ4;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;
@@ -551,7 +555,7 @@
 			baseConfigurationReference = 30D3E2B562B97EC108736ED1 /* Pods-VisualLanguageLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4H789JND9X;
+				DEVELOPMENT_TEAM = ZN4X58VYZ4;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;

@@ -8,6 +8,7 @@ target 'VisualLanguageLearn' do
   # Pods for VisualLanguageLearn
   
   pod 'Firebase/Core'
+  pod 'Firebase/Storage'
   pod 'Firebase/MLVision'
   pod 'Firebase/MLVisionLabelModel'
   pod 'AFNetworking'

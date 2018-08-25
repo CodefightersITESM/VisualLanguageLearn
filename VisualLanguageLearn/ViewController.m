@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 #import <AFNetworking.h>
+#import <CoreLocation/CoreLocation.h>
+
 @import Firebase;
 
-@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
 
 @end
 
@@ -19,11 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UIImage *image = [UIImage imageNamed:@"Tree"];
+    [self uploadImageToFirebase:image];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self takePicture];
+    //[self takePicture];
 }
 
 -(void) takePicture {
@@ -48,11 +53,6 @@
                 NSLog(@"No labels detected");
             } else {
                 [self testTranslation:labels.firstObject.label];
-//                for(FIRVisionLabel *label in labels){
-//                    NSString *labelText = label.label;
-//                    [self testTranslation:labelText];
-//                    NSLog(@"Label Text: %@", labelText);
-//                }
             }
         }
     }];
@@ -72,7 +72,46 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error.localizedDescription);
     }];
+    
 }
+
+
+-(void) uploadImageToFirebase: (UIImage *)image {
+    FIRStorage *storage = [FIRStorage storage];
+    FIRStorageReference *storageRef = [storage reference];
+    NSString *photoId = [[NSUUID new] UUIDString];
+    NSString *photoFile = [NSString stringWithFormat:@"%@.png", photoId];
+    FIRStorageReference *photoRef = [storageRef child:photoFile];
+    NSString *photoImagesReferenceString = [NSString stringWithFormat:@"images/%@", photoFile];
+    FIRStorageReference *photoImagesRef = [storageRef child:photoImagesReferenceString];
+
+    [photoRef.name isEqualToString:photoImagesRef.name];
+    [photoRef.fullPath isEqualToString:photoImagesRef.fullPath];
+    
+    NSData *imageData = UIImagePNGRepresentation(image);
+    
+    FIRStorageUploadTask *uploadTask = [photoImagesRef putData:imageData metadata:nil completion:^(FIRStorageMetadata * _Nullable metadata, NSError * _Nullable error) {
+        if (error != nil) {
+            // Uh-oh, an error occurred!
+        } else {
+            // Metadata contains file metadata such as size, content-type, and download URL.
+            int size = metadata.size;
+            // You can also access to download URL after upload.
+            [photoImagesRef downloadURLWithCompletion:^(NSURL * _Nullable URL, NSError * _Nullable error) {
+                if (error != nil) {
+                    // Uh-oh, an error occurred!
+                } else {
+                    NSURL *downloadURL = URL;
+                }
+            }];
+        }
+
+    }];
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
