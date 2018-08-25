@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AFNetworking.h>
 #import <CoreLocation/CoreLocation.h>
+#import "TranslationManager.h"
 
 @import Firebase;
 
@@ -60,17 +61,8 @@
 }
 
 - (void)testTranslation:(NSString*)text {
-    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
-    NSDictionary* params = @{@"q":text,
-                             @"target":@"es",
-                             @"format":@"text",
-                             @"source":@"en",
-                             @"key":@"AIzaSyCzwSy87KZ0AQJO6460slzTVLmt-5QLv8A"};
-    NSString* baseURL = @"https://translation.googleapis.com/language/translate/v2";
-    [manager POST:baseURL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error.localizedDescription);
+    [[TranslationManager shared] getTranslation:@"apple" source:ENGLISH target:SPANISH completion:^(NSString *translatedText) {
+        NSLog(@"%@", translatedText);
     }];
     
 }

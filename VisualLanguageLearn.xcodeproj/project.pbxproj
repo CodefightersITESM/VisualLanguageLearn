@@ -20,6 +20,7 @@
 		9D4747BF2131C59D00886EED /* VisualLanguageLearnUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4747BE2131C59D00886EED /* VisualLanguageLearnUITests.m */; };
 		9D4747CD2131C94000886EED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D4747CC2131C94000886EED /* GoogleService-Info.plist */; };
 		9D4747CF2131F55C00886EED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4747CE2131F55C00886EED /* CoreLocation.framework */; };
+		9E0F9BBE21320070001A1F4E /* TranslationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F9BBD21320070001A1F4E /* TranslationManager.m */; };
 		DF258812C164B10D38EB5736 /* libPods-VisualLanguageLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9C7568A04417E33F7B4587 /* libPods-VisualLanguageLearn.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		9D4747C02131C59D00886EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4747CC2131C94000886EED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D4747CE2131F55C00886EED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9E0F9BBC21320070001A1F4E /* TranslationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslationManager.h; sourceTree = "<group>"; };
+		9E0F9BBD21320070001A1F4E /* TranslationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TranslationManager.m; sourceTree = "<group>"; };
 		BB3ADFB31E81942E243777C3 /* Pods-VisualLanguageLearnUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnUITests/Pods-VisualLanguageLearnUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D55A6218628C104329F685F6 /* libPods-VisualLanguageLearnUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisualLanguageLearnUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF253EB25F10679DF9AD965E /* libPods-VisualLanguageLearnTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisualLanguageLearnTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +141,7 @@
 		9D4747952131C59D00886EED /* VisualLanguageLearn */ = {
 			isa = PBXGroup;
 			children = (
+				9E0F9BB82131FCDE001A1F4E /* API */,
 				9D4747992131C59D00886EED /* AppDelegate.h */,
 				9D47479A2131C59D00886EED /* AppDelegate.m */,
 				9D47479C2131C59D00886EED /* ViewController.h */,
@@ -177,6 +181,15 @@
 				9D4747C02131C59D00886EED /* Info.plist */,
 			);
 			path = VisualLanguageLearnUITests;
+			sourceTree = "<group>";
+		};
+		9E0F9BB82131FCDE001A1F4E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9E0F9BBC21320070001A1F4E /* TranslationManager.h */,
+				9E0F9BBD21320070001A1F4E /* TranslationManager.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		F03E61E15EAC65C047E6D05D /* Frameworks */ = {
@@ -391,6 +404,7 @@
 				9D47479E2131C59D00886EED /* ViewController.m in Sources */,
 				9D47479B2131C59D00886EED /* AppDelegate.m in Sources */,
 				9D4747982131C59D00886EED /* main.m in Sources */,
+				9E0F9BBE21320070001A1F4E /* TranslationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
