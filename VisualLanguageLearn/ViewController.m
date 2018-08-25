@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+@import Firebase;
 
 @interface ViewController ()
 
@@ -17,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    FIRVision *vision = [FIRVision vision];
+    FIRVisionLabelDetector *labelDetector = [vision labelDetector];
+    
+    UIImage *uiImage = [UIImage imageNamed:@"Tree"];
+    
+    FIRVisionImage *image = [[FIRVisionImage alloc] initWithImage:uiImage];
+    
+
 }
 
 

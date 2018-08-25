@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27E9E4675ED39C79E11F3777 /* libPods-VisualLanguageLearnUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D55A6218628C104329F685F6 /* libPods-VisualLanguageLearnUITests.a */; };
+		54528EF1C70450DACB47F9F5 /* libPods-VisualLanguageLearnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF253EB25F10679DF9AD965E /* libPods-VisualLanguageLearnTests.a */; };
 		9D4747982131C59D00886EED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4747972131C59D00886EED /* main.m */; };
 		9D47479B2131C59D00886EED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D47479A2131C59D00886EED /* AppDelegate.m */; };
 		9D47479E2131C59D00886EED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D47479D2131C59D00886EED /* ViewController.m */; };
@@ -16,6 +18,8 @@
 		9D4747A92131C59D00886EED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4747A72131C59D00886EED /* LaunchScreen.storyboard */; };
 		9D4747B42131C59D00886EED /* VisualLanguageLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4747B32131C59D00886EED /* VisualLanguageLearnTests.m */; };
 		9D4747BF2131C59D00886EED /* VisualLanguageLearnUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4747BE2131C59D00886EED /* VisualLanguageLearnUITests.m */; };
+		9D4747CD2131C94000886EED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D4747CC2131C94000886EED /* GoogleService-Info.plist */; };
+		DF258812C164B10D38EB5736 /* libPods-VisualLanguageLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9C7568A04417E33F7B4587 /* libPods-VisualLanguageLearn.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B6F6E2CD94E1938274E50A9 /* Pods-VisualLanguageLearnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnTests/Pods-VisualLanguageLearnTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30D3E2B562B97EC108736ED1 /* Pods-VisualLanguageLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearn.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearn/Pods-VisualLanguageLearn.release.xcconfig"; sourceTree = "<group>"; };
+		4347037F46FBDD9DC2D1F836 /* Pods-VisualLanguageLearnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnUITests/Pods-VisualLanguageLearnUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5182111A31F1BE728A3B9BA5 /* Pods-VisualLanguageLearnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnTests/Pods-VisualLanguageLearnTests.release.xcconfig"; sourceTree = "<group>"; };
+		7F9C7568A04417E33F7B4587 /* libPods-VisualLanguageLearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisualLanguageLearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B6EBA6E38A7013E240432FF /* Pods-VisualLanguageLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearn/Pods-VisualLanguageLearn.debug.xcconfig"; sourceTree = "<group>"; };
 		9D4747932131C59D00886EED /* VisualLanguageLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualLanguageLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4747972131C59D00886EED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9D4747992131C59D00886EED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +63,10 @@
 		9D4747BA2131C59D00886EED /* VisualLanguageLearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisualLanguageLearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4747BE2131C59D00886EED /* VisualLanguageLearnUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualLanguageLearnUITests.m; sourceTree = "<group>"; };
 		9D4747C02131C59D00886EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D4747CC2131C94000886EED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB3ADFB31E81942E243777C3 /* Pods-VisualLanguageLearnUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnUITests/Pods-VisualLanguageLearnUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D55A6218628C104329F685F6 /* libPods-VisualLanguageLearnUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisualLanguageLearnUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF253EB25F10679DF9AD965E /* libPods-VisualLanguageLearnTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisualLanguageLearnTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF258812C164B10D38EB5736 /* libPods-VisualLanguageLearn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54528EF1C70450DACB47F9F5 /* libPods-VisualLanguageLearnTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +90,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E9E4675ED39C79E11F3777 /* libPods-VisualLanguageLearnUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		178C87ABA558E2C9C21BFDF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B6EBA6E38A7013E240432FF /* Pods-VisualLanguageLearn.debug.xcconfig */,
+				30D3E2B562B97EC108736ED1 /* Pods-VisualLanguageLearn.release.xcconfig */,
+				2B6F6E2CD94E1938274E50A9 /* Pods-VisualLanguageLearnTests.debug.xcconfig */,
+				5182111A31F1BE728A3B9BA5 /* Pods-VisualLanguageLearnTests.release.xcconfig */,
+				4347037F46FBDD9DC2D1F836 /* Pods-VisualLanguageLearnUITests.debug.xcconfig */,
+				BB3ADFB31E81942E243777C3 /* Pods-VisualLanguageLearnUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9D47478A2131C59D00886EED = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +117,8 @@
 				9D4747B22131C59D00886EED /* VisualLanguageLearnTests */,
 				9D4747BD2131C59D00886EED /* VisualLanguageLearnUITests */,
 				9D4747942131C59D00886EED /* Products */,
+				178C87ABA558E2C9C21BFDF1 /* Pods */,
+				F03E61E15EAC65C047E6D05D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +142,7 @@
 				9D47479F2131C59D00886EED /* Main.storyboard */,
 				9D4747A52131C59D00886EED /* Assets.xcassets */,
 				9D4747A72131C59D00886EED /* LaunchScreen.storyboard */,
+				9D4747CC2131C94000886EED /* GoogleService-Info.plist */,
 				9D4747AA2131C59D00886EED /* Info.plist */,
 				9D4747A22131C59D00886EED /* VisualLanguageLearn.xcdatamodeld */,
 				9D4747962131C59D00886EED /* Supporting Files */,
@@ -143,6 +176,16 @@
 			path = VisualLanguageLearnUITests;
 			sourceTree = "<group>";
 		};
+		F03E61E15EAC65C047E6D05D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F9C7568A04417E33F7B4587 /* libPods-VisualLanguageLearn.a */,
+				DF253EB25F10679DF9AD965E /* libPods-VisualLanguageLearnTests.a */,
+				D55A6218628C104329F685F6 /* libPods-VisualLanguageLearnUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D4747C32131C59D00886EED /* Build configuration list for PBXNativeTarget "VisualLanguageLearn" */;
 			buildPhases = (
+				2A2F758EF86303C04B629F19 /* [CP] Check Pods Manifest.lock */,
 				9D47478F2131C59D00886EED /* Sources */,
 				9D4747902131C59D00886EED /* Frameworks */,
 				9D4747912131C59D00886EED /* Resources */,
@@ -167,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D4747C62131C59D00886EED /* Build configuration list for PBXNativeTarget "VisualLanguageLearnTests" */;
 			buildPhases = (
+				0D4D16660B19242223793C11 /* [CP] Check Pods Manifest.lock */,
 				9D4747AB2131C59D00886EED /* Sources */,
 				9D4747AC2131C59D00886EED /* Frameworks */,
 				9D4747AD2131C59D00886EED /* Resources */,
@@ -185,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D4747C92131C59D00886EED /* Build configuration list for PBXNativeTarget "VisualLanguageLearnUITests" */;
 			buildPhases = (
+				0AF8DA7C7DA2C07699A4D4FF /* [CP] Check Pods Manifest.lock */,
 				9D4747B62131C59D00886EED /* Sources */,
 				9D4747B72131C59D00886EED /* Frameworks */,
 				9D4747B82131C59D00886EED /* Resources */,
@@ -210,7 +256,7 @@
 				TargetAttributes = {
 					9D4747922131C59D00886EED = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = H776QDNMS8;
+						DevelopmentTeam = ZN4X58VYZ4;
 						ProvisioningStyle = Automatic;
 					};
 					9D4747AE2131C59D00886EED = {
@@ -253,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4747A92131C59D00886EED /* LaunchScreen.storyboard in Resources */,
+				9D4747CD2131C94000886EED /* GoogleService-Info.plist in Resources */,
 				9D4747A62131C59D00886EED /* Assets.xcassets in Resources */,
 				9D4747A12131C59D00886EED /* Main.storyboard in Resources */,
 			);
@@ -273,6 +320,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AF8DA7C7DA2C07699A4D4FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VisualLanguageLearnUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D4D16660B19242223793C11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VisualLanguageLearnTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A2F758EF86303C04B629F19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VisualLanguageLearn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D47478F2131C59D00886EED /* Sources */ = {
@@ -431,30 +547,33 @@
 		};
 		9D4747C42131C59D00886EED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B6EBA6E38A7013E240432FF /* Pods-VisualLanguageLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H776QDNMS8;
+				DEVELOPMENT_TEAM = ZN4X58VYZ4;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.diaz.VisualLanguageLearn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		9D4747C52131C59D00886EED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30D3E2B562B97EC108736ED1 /* Pods-VisualLanguageLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H776QDNMS8;
+				DEVELOPMENT_TEAM = ZN4X58VYZ4;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.diaz.VisualLanguageLearn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		9D4747C72131C59D00886EED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6F6E2CD94E1938274E50A9 /* Pods-VisualLanguageLearnTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = H776QDNMS8;
@@ -468,6 +587,7 @@
 		};
 		9D4747C82131C59D00886EED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5182111A31F1BE728A3B9BA5 /* Pods-VisualLanguageLearnTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = H776QDNMS8;
@@ -481,6 +601,7 @@
 		};
 		9D4747CA2131C59D00886EED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4347037F46FBDD9DC2D1F836 /* Pods-VisualLanguageLearnUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = H776QDNMS8;
 				INFOPLIST_FILE = VisualLanguageLearnUITests/Info.plist;
@@ -493,6 +614,7 @@
 		};
 		9D4747CB2131C59D00886EED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB3ADFB31E81942E243777C3 /* Pods-VisualLanguageLearnUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = H776QDNMS8;
 				INFOPLIST_FILE = VisualLanguageLearnUITests/Info.plist;
