@@ -40,6 +40,7 @@
     [self initLocation];
     UIImage *image = [UIImage imageNamed:@"Tree"];
     [self uploadImageToFirebase:image];
+    
 }
 
 - (IBAction)signUpB:(id)sender {

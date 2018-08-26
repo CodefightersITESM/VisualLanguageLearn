@@ -9,7 +9,8 @@
 #import "SelectImageViewController.h"
 @import Firebase;
 #import "FIRAuth.h"
-
+#import "Flashcard.h"
+@import Firebase;
 @interface SelectImageViewController ()
 
 @end
@@ -18,7 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    // Do any additional setup after loading the view.
+    [self fetchImagesFromCity];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +34,25 @@
     [[FIRAuth auth] createUserWithEmail:sMail password:sPassword completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
     }];
     
+}
+
+-(void) fetchImagesFromCity {
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseReference *countryReference = [[ref child:@"Countries"] child:@"United States"];
+    [countryReference observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+        NSLog(@"Snapshot: %@", snapshot.key);
+        
+        FIRDatabaseReference *photoRef = [[ref child:@"Images"] child:snapshot.key];
+        
+        [photoRef observeEventType: FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            NSLog(@"Photo Snapshot: %@", snapshot);
+            
+            Flashcard *flashcard = [[Flashcard alloc] initWithSnapshot:snapshot];
+            
+        }];
+        
+    }];
 }
 
 /*

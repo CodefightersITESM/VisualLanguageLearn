@@ -22,6 +22,8 @@
 		9D4747BF2131C59D00886EED /* VisualLanguageLearnUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4747BE2131C59D00886EED /* VisualLanguageLearnUITests.m */; };
 		9D4747CD2131C94000886EED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D4747CC2131C94000886EED /* GoogleService-Info.plist */; };
 		9D4747CF2131F55C00886EED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4747CE2131F55C00886EED /* CoreLocation.framework */; };
+		9DC313472132419A004ABE3C /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC313462132419A004ABE3C /* LearnViewController.m */; };
+		9DC3134A213242AF004ABE3C /* Flashcard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC31349213242AF004ABE3C /* Flashcard.m */; };
 		9E0F9BBE21320070001A1F4E /* TranslationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F9BBD21320070001A1F4E /* TranslationManager.m */; };
 		DF258812C164B10D38EB5736 /* libPods-VisualLanguageLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9C7568A04417E33F7B4587 /* libPods-VisualLanguageLearn.a */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,10 @@
 		9D4747C02131C59D00886EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4747CC2131C94000886EED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D4747CE2131F55C00886EED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9DC313452132419A004ABE3C /* LearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnViewController.h; sourceTree = "<group>"; };
+		9DC313462132419A004ABE3C /* LearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewController.m; sourceTree = "<group>"; };
+		9DC31348213242AF004ABE3C /* Flashcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flashcard.h; sourceTree = "<group>"; };
+		9DC31349213242AF004ABE3C /* Flashcard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flashcard.m; sourceTree = "<group>"; };
 		9E0F9BBC21320070001A1F4E /* TranslationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslationManager.h; sourceTree = "<group>"; };
 		9E0F9BBD21320070001A1F4E /* TranslationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TranslationManager.m; sourceTree = "<group>"; };
 		BB3ADFB31E81942E243777C3 /* Pods-VisualLanguageLearnUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnUITests/Pods-VisualLanguageLearnUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,10 +165,14 @@
 				3BC9BDA2213228F30095B486 /* SelectLanguagesViewController.m */,
 				9D4747A52131C59D00886EED /* Assets.xcassets */,
 				9D4747A72131C59D00886EED /* LaunchScreen.storyboard */,
+				9DC31348213242AF004ABE3C /* Flashcard.h */,
+				9DC31349213242AF004ABE3C /* Flashcard.m */,
 				9D4747CC2131C94000886EED /* GoogleService-Info.plist */,
 				9D4747AA2131C59D00886EED /* Info.plist */,
 				9D4747A22131C59D00886EED /* VisualLanguageLearn.xcdatamodeld */,
 				9D4747962131C59D00886EED /* Supporting Files */,
+				9DC313452132419A004ABE3C /* LearnViewController.h */,
+				9DC313462132419A004ABE3C /* LearnViewController.m */,
 			);
 			path = VisualLanguageLearn;
 			sourceTree = "<group>";
@@ -283,7 +293,7 @@
 				TargetAttributes = {
 					9D4747922131C59D00886EED = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = JWCGN76FSX;
+						DevelopmentTeam = ZN4X58VYZ4;
 						ProvisioningStyle = Automatic;
 					};
 					9D4747AE2131C59D00886EED = {
@@ -411,12 +421,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BC9BDA3213228F30095B486 /* SelectLanguagesViewController.m in Sources */,
+				9DC313472132419A004ABE3C /* LearnViewController.m in Sources */,
 				9D4747A42131C59D00886EED /* VisualLanguageLearn.xcdatamodeld in Sources */,
 				9D47479E2131C59D00886EED /* ViewController.m in Sources */,
 				9D47479B2131C59D00886EED /* AppDelegate.m in Sources */,
 				3BC9BDA621322AB50095B486 /* SelectImageViewController.m in Sources */,
 				9D4747982131C59D00886EED /* main.m in Sources */,
 				9E0F9BBE21320070001A1F4E /* TranslationManager.m in Sources */,
+				9DC3134A213242AF004ABE3C /* Flashcard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +580,7 @@
 			baseConfigurationReference = 9B6EBA6E38A7013E240432FF /* Pods-VisualLanguageLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JWCGN76FSX;
+				DEVELOPMENT_TEAM = ZN4X58VYZ4;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearna;
@@ -581,7 +593,7 @@
 			baseConfigurationReference = 30D3E2B562B97EC108736ED1 /* Pods-VisualLanguageLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JWCGN76FSX;
+				DEVELOPMENT_TEAM = ZN4X58VYZ4;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearna;
