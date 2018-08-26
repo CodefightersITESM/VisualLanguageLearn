@@ -10,7 +10,7 @@
 
 @implementation Flashcard
 
--(instancetype) initWithSnapshot: (FIRDataSnapshot *) snapshot {
+-(instancetype) initWithSnapshot: (FIRDataSnapshot *_Nonnull)  snapshot {
     
     self = [super init];
     if(self){

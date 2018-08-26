@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface SelectImageViewController : UIViewController
 @property (strong, nonatomic) NSString* targetLanguage;
 @property (strong, nonatomic) NSString* sourceLanguage;
+@property (strong, nonatomic) CLLocation* currentLocation;
+@property (strong, nonatomic) NSString *country;
+
 @end

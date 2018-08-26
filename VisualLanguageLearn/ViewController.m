@@ -12,6 +12,7 @@
 #import <AFNetworking.h>
 #import <CoreLocation/CoreLocation.h>
 #import "TranslationManager.h"
+#import "SelectLanguagesViewController.h"
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
 
@@ -170,8 +171,8 @@
             if(error == nil)
             {
                 CLPlacemark* placemark = [placemarks firstObject];
-                NSString* country = placemark.country;
-                NSLog(@"%@", country);
+                self.country = placemark.country;
+                NSLog(@"Country from view controller%@", self.country);
             }
             else
             {
@@ -185,6 +186,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"selectImageSegue"])
+    {
+        SelectLanguagesViewController *vc = [segue destinationViewController];
+        vc.currentLocation = self.currentLocation;
+        vc.country = self.country;
+    }
+}
+
 
 
 @end

@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *objectImage;
 @property (weak, nonatomic) IBOutlet UILabel *translationLanguageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *originalWord;
+@property (strong, nonatomic) NSMutableArray *flashcards;
+
+@property (nonatomic) int index;
 
 
 @end
@@ -26,10 +29,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.index = 0;
+    self.flashcards = [NSMutableArray new];
+    [self fetchImagesFromCity];
 }
 
 
 - (IBAction)didTapNext:(id)sender {
+    self.index += 1;
+    [self prepareLearn];
+}
+
+- (IBAction)didTapBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void) fetchImagesFromCity {
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseReference *countryReference = [[ref child:@"Countries"] child:self.country];
+    [countryReference observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        FIRDatabaseReference *photoRef = [[ref child:@"Images"] child:snapshot.key];
+        [photoRef observeEventType: FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            Flashcard *flashcard = [[Flashcard alloc] initWithSnapshot:snapshot];
+            [self.flashcards addObject:flashcard];
+            [self prepareLearn];
+        }];
+        
+    }];
+}
+
+-(void) prepareLearn {
+    if(self.index < self.flashcards.count){
+        Flashcard *flashcard = [self.flashcards objectAtIndex: self.index];
+        FIRStorageReference *storageRef = [[FIRStorage storage] referenceForURL:flashcard.url];
+        [storageRef dataWithMaxSize:(1*1024*1024) completion:^(NSData * _Nullable data, NSError * _Nullable error) {
+            if(error != nil){
+                self.index += 1;
+                [self prepareLearn];
+            } else {
+                UIImage *image = [UIImage imageWithData:data];
+                self.objectImage.image = image;
+            }
+        }];
+        
+        self.originalLanguageLabel.text = flashcard.original;
+        self.translationLanguageLabel.text = flashcard.translation;
+    }
+
 }
 
 

@@ -9,6 +9,11 @@
 #import "SelectLanguagesViewController.h"
 #import "SelectImageViewController.h"
 #import "TranslationManager.h"
+#import "Flashcard.h"
+#import <CoreLocation/CoreLocation.h>
+
+@import Firebase;
+
 
 @interface SelectLanguagesViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UIPickerView *NativeLanguage;
@@ -28,6 +33,9 @@
     self.LearnLanguage.delegate = self;
     self.LearnLanguage.tag = 1;
     
+    NSLog(@"Country from select language: %@", self.country);
+
+    
     // Do any additional setup after loading the view.
     [[TranslationManager shared] getSupportedLanguagesWithCompletion:^(NSArray<NSDictionary *> *languages) {
         self.languages = languages;
@@ -35,6 +43,26 @@
         [self.LearnLanguage reloadAllComponents];
     }];
 }
+
+-(void) fetchImagesFromCity {
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseReference *countryReference = [[ref child:@"Countries"] child:@"United States"];
+    [countryReference observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+        NSLog(@"Snapshot: %@", snapshot.key);
+        
+        FIRDatabaseReference *photoRef = [[ref child:@"Images"] child:snapshot.key];
+        
+        [photoRef observeEventType: FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            NSLog(@"Photo Snapshot: %@", snapshot);
+            
+            Flashcard *flashcard = [[Flashcard alloc] initWithSnapshot:snapshot];
+            
+        }];
+        
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -51,6 +79,8 @@
         SelectImageViewController* vc = [segue destinationViewController];
         vc.targetLanguage = self.languages[[self.LearnLanguage selectedRowInComponent:0]][@"language"];
         vc.sourceLanguage = self.languages[[self.NativeLanguage selectedRowInComponent:0]][@"language"];
+        vc.currentLocation = self.currentLocation;
+        vc.country = self.country;
     } 
 }
 

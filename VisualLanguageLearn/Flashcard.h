@@ -17,6 +17,6 @@
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
 @property (nonatomic, strong) NSString *url;
--(instancetype) initWithSnapshot: (FIRDataSnapshot *) snapshot;
+-(instancetype) initWithSnapshot: (FIRDataSnapshot *_Nonnull) snapshot;
 
 @end

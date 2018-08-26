@@ -10,7 +10,6 @@
 
 @interface LearnViewController : UIViewController
 
-@property (strong, nonatomic) NSArray *flashcards;
 @property (strong, nonatomic) NSString *country;
 
 @end
