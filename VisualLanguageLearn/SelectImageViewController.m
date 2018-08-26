@@ -7,9 +7,9 @@
 //
 
 #import "SelectImageViewController.h"
-@import Firebase;
 #import "FIRAuth.h"
 #import "Flashcard.h"
+#import "FIRDatabaseReference.h"
 @import Firebase;
 @interface SelectImageViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *image;
@@ -57,6 +57,7 @@
         
     }];
 }
+
 - (IBAction)didTapAdd:(id)sender {
     [self performSegueWithIdentifier:@"learnSegue" sender:self];
 }

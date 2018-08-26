@@ -28,19 +28,6 @@
     // Do any additional setup after loading the view.
 }
 
--(void) fetchImagesFromCity {
-    
-    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
-    
-    FIRDatabaseReference *countryReference = [[ref child:@"Countries"] child:self.country];
-    
-    [countryReference observeSingleEventOfType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        if(snapshot != nil){
-            NSLog(@"%@", snapshot);
-        }
-    }];
-    
-}
 
 - (IBAction)didTapNext:(id)sender {
 }

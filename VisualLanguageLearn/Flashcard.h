@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FIRDataSnapshot.h"
 @import Firebase;
 
 @interface Flashcard : NSObject

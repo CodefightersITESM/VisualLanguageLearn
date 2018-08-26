@@ -293,7 +293,7 @@
 				TargetAttributes = {
 					9D4747922131C59D00886EED = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = ZN4X58VYZ4;
+						DevelopmentTeam = 4H789JND9X;
 						ProvisioningStyle = Automatic;
 					};
 					9D4747AE2131C59D00886EED = {
@@ -580,10 +580,10 @@
 			baseConfigurationReference = 9B6EBA6E38A7013E240432FF /* Pods-VisualLanguageLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZN4X58VYZ4;
+				DEVELOPMENT_TEAM = 4H789JND9X;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearna;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -593,10 +593,10 @@
 			baseConfigurationReference = 30D3E2B562B97EC108736ED1 /* Pods-VisualLanguageLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZN4X58VYZ4;
+				DEVELOPMENT_TEAM = 4H789JND9X;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearna;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
