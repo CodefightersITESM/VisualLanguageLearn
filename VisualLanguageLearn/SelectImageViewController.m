@@ -10,8 +10,10 @@
 #import "FIRAuth.h"
 #import "Flashcard.h"
 #import "FIRDatabaseReference.h"
+#import "TranslationManager.h"
+
 @import Firebase;
-@interface SelectImageViewController ()
+@interface SelectImageViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *translationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *originalLabel;
@@ -29,14 +31,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (void) userRegister : (NSString *)sMail Password: (NSString * )sPassword {
-    
-    
-    [[FIRAuth auth] createUserWithEmail:sMail password:sPassword completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
-    }];
-    
 }
 
 -(void) fetchImagesFromCity {
@@ -60,6 +54,39 @@
 
 - (IBAction)didTapAdd:(id)sender {
     [self performSegueWithIdentifier:@"learnSegue" sender:self];
+}
+
+- (IBAction)didTapPicture:(id)sender {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+    FIRVision *vision = [FIRVision vision];
+    FIRVisionLabelDetector *labelDetector = [vision labelDetector];
+    FIRVisionImage *image = [[FIRVisionImage alloc] initWithImage:editedImage];
+    [labelDetector detectInImage:image completion:^(NSArray<FIRVisionLabel *> * _Nullable labels, NSError * _Nullable error) {
+        if(error != nil){
+            NSLog(@"Error getting the labels");
+        } else {
+            
+            if(labels.count == 0){
+                NSLog(@"No labels detected");
+            } else {
+                NSString* text = labels.firstObject.label;
+                [[TranslationManager shared] getTranslation:text source:self.sourceLanguage target:self.targetLanguage completion:^(NSString *translatedText) {
+                    self.originalLabel.text = text;
+                    self.translationLabel.text = translatedText;
+                    self.image.image = editedImage;
+                }];
+            }
+        }
+    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

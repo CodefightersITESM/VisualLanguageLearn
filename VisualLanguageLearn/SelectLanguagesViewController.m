@@ -49,8 +49,8 @@
     if([segue.identifier isEqualToString:@"selectImageSegue"])
     {
         SelectImageViewController* vc = [segue destinationViewController];
-        vc.targetLanguage = self.languages[[self.LearnLanguage selectedRowInComponent:0]][@"code"];
-        vc.sourceLanguage = self.languages[[self.NativeLanguage selectedRowInComponent:0]][@"code"];
+        vc.targetLanguage = self.languages[[self.LearnLanguage selectedRowInComponent:0]][@"language"];
+        vc.sourceLanguage = self.languages[[self.NativeLanguage selectedRowInComponent:0]][@"language"];
     } 
 }
 
