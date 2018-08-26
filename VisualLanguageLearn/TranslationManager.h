@@ -16,4 +16,5 @@ static NSString* const FRENCH = @"fr";
 + (instancetype)shared;
 
 - (void)getTranslation:(NSString*)text source:(NSString*)source target:(NSString*)target completion:(void(^)(NSString* translatedText))completion;
+- (void)getSupportedLanguagesWithCompletion:(void(^)(NSArray<NSDictionary*>* languages))completion;
 @end

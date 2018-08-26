@@ -36,4 +36,20 @@ static NSString* const API_KEY = @"AIzaSyCzwSy87KZ0AQJO6460slzTVLmt-5QLv8A";
         completion(nil);
     }];
 }
+
+- (void)getSupportedLanguagesWithCompletion:(void (^)(NSArray<NSDictionary *> *))completion {
+    NSDictionary* params = @{@"target":@"en",
+                             @"key":API_KEY};
+    NSString* baseURL = @"https://translation.googleapis.com/language/translate/v2/languages";
+    [self POST:baseURL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSMutableArray<NSDictionary*>* languages = [[NSMutableArray alloc] init];
+        for(NSDictionary* language in responseObject[@"data"][@"languages"])
+        {
+            [languages addObject:language];
+        }
+        completion([languages copy]);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+}
 @end

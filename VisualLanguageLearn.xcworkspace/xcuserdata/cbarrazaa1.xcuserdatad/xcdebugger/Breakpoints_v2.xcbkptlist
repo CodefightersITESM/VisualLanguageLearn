@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VisualLanguageLearn/TranslationManager.m"
-            timestampString = "556926699.0444961"
+            timestampString = "556942881.4604141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -32,6 +32,86 @@
             startingLineNumber = "119"
             endingLineNumber = "119"
             landmarkName = "-locationManager:didUpdateLocations:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VisualLanguageLearn/TranslationManager.m"
+            timestampString = "556942881.4608999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-getSupportedLanguagesWithCompletion:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TranslationManager getSupportedLanguagesWithCompletion:]"
+                  moduleName = "VisualLanguageLearn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cbarrazaa1/Desktop/untitled%20folder/VisualLanguageLearn/VisualLanguageLearn/TranslationManager.m"
+                  timestampString = "556942644.877575"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "193">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__58-[TranslationManager getSupportedLanguagesWithCompletion:]_block_invoke"
+                  moduleName = "VisualLanguageLearn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cbarrazaa1/Desktop/untitled%20folder/VisualLanguageLearn/VisualLanguageLearn/TranslationManager.m"
+                  timestampString = "556942644.882149"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VisualLanguageLearn/TranslationManager.m"
+            timestampString = "556942881.461122"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-getSupportedLanguagesWithCompletion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VisualLanguageLearn/TranslationManager.m"
+            timestampString = "556942881.461325"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-getSupportedLanguagesWithCompletion:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

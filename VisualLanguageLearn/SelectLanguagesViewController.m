@@ -7,20 +7,31 @@
 //
 
 #import "SelectLanguagesViewController.h"
+#import "SelectImageViewController.h"
+#import "TranslationManager.h"
 
-@interface SelectLanguagesViewController ()
-
+@interface SelectLanguagesViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UIPickerView *NativeLanguage;
-
 @property (weak, nonatomic) IBOutlet UIPickerView *LearnLanguage;
 
+@property (strong, nonatomic) NSArray<NSDictionary*>* languages;
 @end
 
 @implementation SelectLanguagesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.NativeLanguage.dataSource = self;
+    self.NativeLanguage.delegate = self;
+    self.NativeLanguage.tag = 0;
+    self.LearnLanguage.dataSource = self;
+    self.LearnLanguage.delegate = self;
+    self.LearnLanguage.tag = 1;
+    
     // Do any additional setup after loading the view.
+    [[TranslationManager shared] getSupportedLanguagesWithCompletion:^(NSArray<NSDictionary *> *languages) {
+        self.languages = languages;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,14 +39,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (IBAction)nextClicked:(id)sender {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"selectImageSegue"])
+    {
+        SelectImageViewController* vc = [segue destinationViewController];
+        
+    }
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
 
 @end

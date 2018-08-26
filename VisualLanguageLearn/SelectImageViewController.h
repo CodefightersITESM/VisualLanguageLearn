@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SelectImageViewController : UIViewController
-
+@property (strong, nonatomic) NSString* targetLanguage;
+@property (strong, nonatomic) NSString* sourceLanguage;
 @end

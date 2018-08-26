@@ -571,7 +571,7 @@
 				DEVELOPMENT_TEAM = 4H789JND9X;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearna;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -584,7 +584,7 @@
 				DEVELOPMENT_TEAM = 4H789JND9X;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearna;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
