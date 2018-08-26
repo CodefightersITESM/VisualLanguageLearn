@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *translationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *originalLabel;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (strong, nonatomic) CLLocationManager* locationManager;
 
 
@@ -31,6 +32,9 @@
     [super viewDidLoad];
     [self initLocation];
 
+    self.addButton.layer.cornerRadius = 10;
+    self.addButton.clipsToBounds = YES;
+    
     // Do any additional setup after loading the view.
     //[self fetchImagesFromCity];
 }
@@ -106,10 +110,12 @@
                 NSLog(@"No labels detected");
             } else {
                 NSString* text = labels.firstObject.label;
-                [[TranslationManager shared] getTranslation:text source:self.sourceLanguage target:self.targetLanguage completion:^(NSString *translatedText) {
-                    self.originalLabel.text = text;
-                    self.translationLabel.text = translatedText;
-                    self.image.image = editedImage;
+                [[TranslationManager shared] getTranslation:text source:ENGLISH target:self.targetLanguage completion:^(NSString *translatedText) {
+                    [[TranslationManager shared] getTranslation:text source:ENGLISH target:self.sourceLanguage completion:^(NSString *translatedOriginal) {
+                        self.originalLabel.text = translatedOriginal;
+                        self.translationLabel.text = translatedText;
+                        self.image.image = editedImage;
+                    }];
                 }];
             }
         }

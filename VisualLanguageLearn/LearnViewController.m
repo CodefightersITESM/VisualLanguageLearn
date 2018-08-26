@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *objectImage;
 @property (weak, nonatomic) IBOutlet UILabel *translationLanguageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *originalWord;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (strong, nonatomic) NSMutableArray *flashcards;
 
 @property (nonatomic) int index;
@@ -32,6 +33,8 @@
     self.index = 0;
     self.flashcards = [NSMutableArray new];
     [self fetchImagesFromCity];
+    self.nextButton.layer.cornerRadius = 10;
+    self.nextButton.clipsToBounds = YES;
 }
 
 

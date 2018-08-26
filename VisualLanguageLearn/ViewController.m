@@ -16,6 +16,8 @@
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *emailView;
+@property (weak, nonatomic) IBOutlet UIView *passwordView;
 @property (weak, nonatomic) IBOutlet UITextField *EmailText;
 @property (weak, nonatomic) IBOutlet UITextField *PasswordText;
 @property (weak, nonatomic) IBOutlet UIButton *SignIn;
@@ -42,6 +44,14 @@
     UIImage *image = [UIImage imageNamed:@"Tree"];
     [self uploadImageToFirebase:image];
     
+    self.emailView.layer.cornerRadius = 10;
+    self.emailView.clipsToBounds = YES;
+    self.passwordView.layer.cornerRadius = 10;
+    self.passwordView.clipsToBounds = YES;
+    self.SignIn.layer.cornerRadius = 10;
+    self.SignIn.clipsToBounds = YES;
+    self.SignUp.layer.cornerRadius = 10;
+    self.SignUp.clipsToBounds = YES;
 }
 
 - (IBAction)didTapSignIn:(id)sender {

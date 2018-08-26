@@ -18,6 +18,7 @@
 @interface SelectLanguagesViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UIPickerView *NativeLanguage;
 @property (weak, nonatomic) IBOutlet UIPickerView *LearnLanguage;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @property (strong, nonatomic) NSArray<NSDictionary*>* languages;
 @end
@@ -35,6 +36,8 @@
     
     NSLog(@"Country from select language: %@", self.country);
 
+    self.nextButton.layer.cornerRadius = 10;
+    self.nextButton.clipsToBounds = YES;
     
     // Do any additional setup after loading the view.
     [[TranslationManager shared] getSupportedLanguagesWithCompletion:^(NSArray<NSDictionary *> *languages) {
@@ -96,4 +99,17 @@
     return self.languages[row][@"name"];
 }
 
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    NSString* text = self.languages[row][@"name"];
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, -18, pickerView.frame.size.width, 60)];
+    label.text = text;
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont fontWithName:@"AvenirNext" size:20];
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    view = [[UIView alloc] init];
+    [view addSubview:label];
+    
+    return view;
+}
 @end

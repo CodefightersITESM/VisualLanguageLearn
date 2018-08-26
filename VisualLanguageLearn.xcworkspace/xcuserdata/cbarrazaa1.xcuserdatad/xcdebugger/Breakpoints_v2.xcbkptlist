@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VisualLanguageLearn/TranslationManager.m"
-            timestampString = "556961534.484151"
+            timestampString = "556971948.667578"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VisualLanguageLearn/ViewController.m"
-            timestampString = "556961405.416582"
+            timestampString = "556976469.163139"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "-takePicture"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VisualLanguageLearn/TranslationManager.m"
-            timestampString = "556961534.484581"
+            timestampString = "556971948.6677099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VisualLanguageLearn/TranslationManager.m"
-            timestampString = "556961534.484815"
+            timestampString = "556971948.6677589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VisualLanguageLearn/TranslationManager.m"
-            timestampString = "556961534.4850219"
+            timestampString = "556971948.667799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -122,12 +122,154 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VisualLanguageLearn/TranslationManager.m"
-            timestampString = "556961534.485226"
+            timestampString = "556971948.667836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "-getTranslation:source:target:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VisualLanguageLearn/SelectImageViewController.m"
+            timestampString = "556976469.163301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__81-[SelectImageViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
+                  moduleName = "VisualLanguageLearn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cbarrazaa1/Desktop/untitled%20folder/VisualLanguageLearn/VisualLanguageLearn/SelectImageViewController.m"
+                  timestampString = "556974911.725445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__81-[SelectImageViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke_2"
+                  moduleName = "VisualLanguageLearn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cbarrazaa1/Desktop/untitled%20folder/VisualLanguageLearn/VisualLanguageLearn/SelectImageViewController.m"
+                  timestampString = "556974911.73086"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.270"
+                  moduleName = "VisualLanguageLearn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cbarrazaa1/Desktop/untitled%20folder/VisualLanguageLearn/VisualLanguageLearn/SelectImageViewController.m"
+                  timestampString = "556974911.741156"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VisualLanguageLearn/SelectImageViewController.m"
+            timestampString = "556976469.163371"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__81-[SelectImageViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke_2"
+                  moduleName = "VisualLanguageLearn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cbarrazaa1/Desktop/untitled%20folder/VisualLanguageLearn/VisualLanguageLearn/SelectImageViewController.m"
+                  timestampString = "556974911.790222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__81-[SelectImageViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke_3"
+                  moduleName = "VisualLanguageLearn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cbarrazaa1/Desktop/untitled%20folder/VisualLanguageLearn/VisualLanguageLearn/SelectImageViewController.m"
+                  timestampString = "556974911.793734"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.264"
+                  moduleName = "VisualLanguageLearn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cbarrazaa1/Desktop/untitled%20folder/VisualLanguageLearn/VisualLanguageLearn/SelectImageViewController.m"
+                  timestampString = "556974911.809842"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VisualLanguageLearn/SelectImageViewController.m"
+            timestampString = "556976469.16343"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
