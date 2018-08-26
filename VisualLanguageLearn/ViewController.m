@@ -5,13 +5,13 @@
 //  Created by Hector Díaz Aceves on 25/08/18.
 //  Copyright © 2018 Codefighters. All rights reserved.
 //
+@import Firebase;
+#import "FIRAuth.h"
 
 #import "ViewController.h"
 #import <AFNetworking.h>
 #import <CoreLocation/CoreLocation.h>
 #import "TranslationManager.h"
-
-@import Firebase;
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
 
@@ -26,12 +26,32 @@
 
 @implementation ViewController
 
+- (IBAction)onTap:(id)sender {
+    
+    [self.EmailText resignFirstResponder];
+    [self.PasswordText
+     resignFirstResponder];
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self initLocation];
     UIImage *image = [UIImage imageNamed:@"Tree"];
     [self uploadImageToFirebase:image];
+}
+
+- (IBAction)signUpB:(id)sender {
+    [self userRegister:self.EmailText.text Password:self.PasswordText.text];
+}
+
+- (void) userRegister : (NSString *)sMail Password: (NSString * )sPassword {
+
+    
+    [[FIRAuth auth] createUserWithEmail:sMail password:sPassword completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+    }];
+    
 }
 
 - (void)initLocation {
