@@ -7,6 +7,8 @@
 //
 
 #import "SelectImageViewController.h"
+@import Firebase;
+#import "FIRAuth.h"
 
 @interface SelectImageViewController ()
 
@@ -22,6 +24,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) userRegister : (NSString *)sMail Password: (NSString * )sPassword {
+    
+    
+    [[FIRAuth auth] createUserWithEmail:sMail password:sPassword completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+    }];
+    
 }
 
 /*
