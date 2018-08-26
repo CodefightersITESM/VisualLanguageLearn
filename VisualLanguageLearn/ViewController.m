@@ -15,6 +15,11 @@
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *EmailText;
+@property (weak, nonatomic) IBOutlet UITextField *PasswordText;
+@property (weak, nonatomic) IBOutlet UIButton *SignIn;
+@property (weak, nonatomic) IBOutlet UIButton *SignUp;
+
 
 @end
 

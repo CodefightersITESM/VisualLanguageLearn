@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		27E9E4675ED39C79E11F3777 /* libPods-VisualLanguageLearnUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D55A6218628C104329F685F6 /* libPods-VisualLanguageLearnUITests.a */; };
+		3BC9BDA3213228F30095B486 /* SelectLanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9BDA2213228F30095B486 /* SelectLanguagesViewController.m */; };
+		3BC9BDA621322AB50095B486 /* SelectImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9BDA521322AB50095B486 /* SelectImageViewController.m */; };
 		54528EF1C70450DACB47F9F5 /* libPods-VisualLanguageLearnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF253EB25F10679DF9AD965E /* libPods-VisualLanguageLearnTests.a */; };
 		9D4747982131C59D00886EED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4747972131C59D00886EED /* main.m */; };
 		9D47479B2131C59D00886EED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D47479A2131C59D00886EED /* AppDelegate.m */; };
@@ -44,6 +46,10 @@
 /* Begin PBXFileReference section */
 		2B6F6E2CD94E1938274E50A9 /* Pods-VisualLanguageLearnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnTests/Pods-VisualLanguageLearnTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30D3E2B562B97EC108736ED1 /* Pods-VisualLanguageLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearn.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearn/Pods-VisualLanguageLearn.release.xcconfig"; sourceTree = "<group>"; };
+		3BC9BDA1213228F30095B486 /* SelectLanguagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectLanguagesViewController.h; sourceTree = "<group>"; };
+		3BC9BDA2213228F30095B486 /* SelectLanguagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectLanguagesViewController.m; sourceTree = "<group>"; };
+		3BC9BDA421322AB50095B486 /* SelectImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectImageViewController.h; sourceTree = "<group>"; };
+		3BC9BDA521322AB50095B486 /* SelectImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectImageViewController.m; sourceTree = "<group>"; };
 		4347037F46FBDD9DC2D1F836 /* Pods-VisualLanguageLearnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnUITests/Pods-VisualLanguageLearnUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5182111A31F1BE728A3B9BA5 /* Pods-VisualLanguageLearnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisualLanguageLearnTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisualLanguageLearnTests/Pods-VisualLanguageLearnTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F9C7568A04417E33F7B4587 /* libPods-VisualLanguageLearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisualLanguageLearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +153,10 @@
 				9D47479C2131C59D00886EED /* ViewController.h */,
 				9D47479D2131C59D00886EED /* ViewController.m */,
 				9D47479F2131C59D00886EED /* Main.storyboard */,
+				3BC9BDA421322AB50095B486 /* SelectImageViewController.h */,
+				3BC9BDA521322AB50095B486 /* SelectImageViewController.m */,
+				3BC9BDA1213228F30095B486 /* SelectLanguagesViewController.h */,
+				3BC9BDA2213228F30095B486 /* SelectLanguagesViewController.m */,
 				9D4747A52131C59D00886EED /* Assets.xcassets */,
 				9D4747A72131C59D00886EED /* LaunchScreen.storyboard */,
 				9D4747CC2131C94000886EED /* GoogleService-Info.plist */,
@@ -273,7 +283,7 @@
 				TargetAttributes = {
 					9D4747922131C59D00886EED = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = ZN4X58VYZ4;
+						DevelopmentTeam = JWCGN76FSX;
 						ProvisioningStyle = Automatic;
 					};
 					9D4747AE2131C59D00886EED = {
@@ -400,9 +410,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC9BDA3213228F30095B486 /* SelectLanguagesViewController.m in Sources */,
 				9D4747A42131C59D00886EED /* VisualLanguageLearn.xcdatamodeld in Sources */,
 				9D47479E2131C59D00886EED /* ViewController.m in Sources */,
 				9D47479B2131C59D00886EED /* AppDelegate.m in Sources */,
+				3BC9BDA621322AB50095B486 /* SelectImageViewController.m in Sources */,
 				9D4747982131C59D00886EED /* main.m in Sources */,
 				9E0F9BBE21320070001A1F4E /* TranslationManager.m in Sources */,
 			);
@@ -556,10 +568,10 @@
 			baseConfigurationReference = 9B6EBA6E38A7013E240432FF /* Pods-VisualLanguageLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZN4X58VYZ4;
+				DEVELOPMENT_TEAM = JWCGN76FSX;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -569,10 +581,10 @@
 			baseConfigurationReference = 30D3E2B562B97EC108736ED1 /* Pods-VisualLanguageLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZN4X58VYZ4;
+				DEVELOPMENT_TEAM = JWCGN76FSX;
 				INFOPLIST_FILE = VisualLanguageLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefighters.VisualLanguageLearna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
