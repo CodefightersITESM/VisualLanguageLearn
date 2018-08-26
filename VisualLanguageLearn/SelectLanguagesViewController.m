@@ -31,6 +31,8 @@
     // Do any additional setup after loading the view.
     [[TranslationManager shared] getSupportedLanguagesWithCompletion:^(NSArray<NSDictionary *> *languages) {
         self.languages = languages;
+        [self.NativeLanguage reloadAllComponents];
+        [self.LearnLanguage reloadAllComponents];
     }];
 }
 
@@ -47,12 +49,21 @@
     if([segue.identifier isEqualToString:@"selectImageSegue"])
     {
         SelectImageViewController* vc = [segue destinationViewController];
-        
-    }
+        vc.targetLanguage = self.languages[[self.LearnLanguage selectedRowInComponent:0]][@"code"];
+        vc.sourceLanguage = self.languages[[self.NativeLanguage selectedRowInComponent:0]][@"code"];
+    } 
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return self.languages.count;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return self.languages[row][@"name"];
 }
 
 @end

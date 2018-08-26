@@ -126,6 +126,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextClicked:" destination="nI7-Gf-DlC" eventType="touchUpInside" id="4bv-eW-Mnp"/>
+                                    <segue destination="nvd-wZ-Vsj" kind="show" identifier="selectImageSegue" id="sBp-rX-UAH"/>
                                 </connections>
                             </button>
                         </subviews>
