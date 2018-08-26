@@ -57,6 +57,9 @@
         
     }];
 }
+- (IBAction)didTapAdd:(id)sender {
+    [self performSegueWithIdentifier:@"learnSegue" sender:self];
+}
 
 /*
 #pragma mark - Navigation

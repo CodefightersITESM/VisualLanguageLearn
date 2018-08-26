@@ -13,6 +13,12 @@
 
 @interface LearnViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *originalLanguageLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *objectImage;
+@property (weak, nonatomic) IBOutlet UILabel *translationLanguageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *originalWord;
+
+
 @end
 
 @implementation LearnViewController
@@ -35,6 +41,10 @@
     }];
     
 }
+
+- (IBAction)didTapNext:(id)sender {
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

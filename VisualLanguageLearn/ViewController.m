@@ -43,6 +43,19 @@
     
 }
 
+- (IBAction)didTapSignIn:(id)sender {
+    
+    [[FIRAuth auth] signInWithEmail:self.EmailText.text password:self.PasswordText.text completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+        if(error != nil){
+            NSLog(@"Error signin in");
+        } else {
+            [self performSegueWithIdentifier:@"showLanguagesSegue" sender:self];
+        }
+    
+    }];
+}
+
+
 - (IBAction)signUpB:(id)sender {
     [self userRegister:self.EmailText.text Password:self.PasswordText.text];
 }
@@ -51,6 +64,11 @@
 
     
     [[FIRAuth auth] createUserWithEmail:sMail password:sPassword completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+        if(error != nil){
+            NSLog(@"Error creating user in firebase");
+        } else {
+            [self performSegueWithIdentifier:@"showLanguagesSegue" sender:self];
+        }
     }];
     
 }
