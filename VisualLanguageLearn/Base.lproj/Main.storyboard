@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -186,6 +186,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="oAg-G4-Yg5" id="OsH-p9-Pde"/>
+                        <outlet property="originalLabel" destination="93m-lT-6Up" id="WSI-LX-FWS"/>
+                        <outlet property="translationLabel" destination="1OW-0z-Q6R" id="uZW-m9-PId"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tqi-U9-Mrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

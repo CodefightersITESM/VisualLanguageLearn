@@ -12,6 +12,9 @@
 #import "Flashcard.h"
 @import Firebase;
 @interface SelectImageViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *translationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *originalLabel;
 
 @end
 
