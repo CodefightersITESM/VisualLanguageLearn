@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *originalLabel;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (strong, nonatomic) CLLocationManager* locationManager;
+@property (strong, nonatomic) NSString *englishWord;
 
 
 @end
@@ -80,7 +81,6 @@
 - (IBAction)didTapAdd:(id)sender {
     UIImage *imageSelected = self.image.image;
     [self uploadImageToFirebase:imageSelected];
-    [self performSegueWithIdentifier:@"learnSegue" sender:self];
 }
 
 - (IBAction)didTapPicture:(id)sender {
@@ -110,13 +110,26 @@
                 NSLog(@"No labels detected");
             } else {
                 NSString* text = labels.firstObject.label;
-                [[TranslationManager shared] getTranslation:text source:ENGLISH target:self.targetLanguage completion:^(NSString *translatedText) {
-                    [[TranslationManager shared] getTranslation:text source:ENGLISH target:self.sourceLanguage completion:^(NSString *translatedOriginal) {
-                        self.originalLabel.text = translatedOriginal;
+                self.image.image = editedImage;
+                if([self.sourceLanguage isEqualToString:ENGLISH]){
+                    self.originalLabel.text = text;
+                    [[TranslationManager shared] getTranslation:text source:self.sourceLanguage target:self.targetLanguage completion:^(NSString *translatedText) {
                         self.translationLabel.text = translatedText;
-                        self.image.image = editedImage;
                     }];
-                }];
+                    
+                } else if([self.targetLanguage isEqualToString:ENGLISH]) {
+                    self.translationLabel.text = text;
+                    [[TranslationManager shared] getTranslation:text source:self.sourceLanguage target:self.targetLanguage completion:^(NSString *translatedText) {
+                        self.originalLabel.text = translatedText;
+                    }];
+                } else {
+                    [[TranslationManager shared] getTranslation:text source:self.sourceLanguage target:self.targetLanguage completion:^(NSString *translatedText) {
+                        self.translationLabel.text = translatedText;
+                    }];
+                    [[TranslationManager shared] getTranslation:text source:self.sourceLanguage target:self.targetLanguage completion:^(NSString *translatedText) {
+                        self.originalLabel.text = translatedText;
+                    }];
+                }
             }
         }
     }];
@@ -166,7 +179,12 @@
                     FIRDatabaseReference *countryReference = [[ref child:@"Countries"] child: self.country];
                     
                     [[countryReference child:photoId] setValue:[NSNumber numberWithInt:1]];
+                    NSString *userId = [[[FIRAuth auth] currentUser] uid];
+                    FIRDatabaseReference *userPictureReference = [[ref child:@"User-Images"] child:userId];
                     
+                    [[userPictureReference child:photoId] setValue:[NSNumber numberWithInt:1]];
+                    [self performSegueWithIdentifier:@"learnSegue" sender:self];
+
                     
                 }
             }];
